@@ -60,8 +60,6 @@
     <Compile Include="VssItemName.cs" />
     <Compile Include="VssAction.cs" />
     <Compile Include="VssPathException.cs" />
-    <Compile Include="VssProjectRevision.cs" />
-    <Compile Include="VssFileRevision.cs" />
     <Compile Include="VssFile.cs" />
     <Compile Include="VssItem.cs" />
     <Compile Include="VssProject.cs" />
@@ -69,7 +67,6 @@
     <Compile Include="VssDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VssDatabaseFactory.cs" />
-    <Compile Include="VssRevision.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VssPhysicalLib\VssPhysicalLib.csproj">
@@ -83,10 +80,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

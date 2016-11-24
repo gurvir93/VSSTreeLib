@@ -71,16 +71,6 @@ namespace Hpdi.VssLogicalLib
             get { return Header.CreationDateTime; }
         }
 
-        public new IEnumerable<VssFileRevision> Revisions
-        {
-            get { return new VssRevisions<VssFile, VssFileRevision>(this); }
-        }
-
-        public new VssFileRevision GetRevision(int version)
-        {
-            return (VssFileRevision)base.GetRevision(version);
-        }
-
         internal FileHeaderRecord Header
         {
             get { return (FileHeaderRecord)ItemFile.Header; }
@@ -94,11 +84,6 @@ namespace Hpdi.VssLogicalLib
         public string GetPath(VssProject project)
         {
             return project.Path + VssDatabase.ProjectSeparator + Name;
-        }
-
-        protected override VssRevision CreateRevision(RevisionRecord revision, CommentRecord comment)
-        {
-            return new VssFileRevision(this, revision, comment);
         }
     }
 }

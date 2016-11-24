@@ -43,16 +43,6 @@ namespace Hpdi.VssLogicalLib
             get { return new VssFiles(this); }
         }
 
-        public new IEnumerable<VssProjectRevision> Revisions
-        {
-            get { return new VssRevisions<VssProject, VssProjectRevision>(this); }
-        }
-
-        public new VssProjectRevision GetRevision(int version)
-        {
-            return (VssProjectRevision)base.GetRevision(version);
-        }
-
         public VssProject FindProject(string name)
         {
             foreach (VssProject subproject in Projects)
@@ -92,11 +82,6 @@ namespace Hpdi.VssLogicalLib
             : base(database, itemName, physicalPath)
         {
             this.logicalPath = logicalPath;
-        }
-
-        protected override VssRevision CreateRevision(RevisionRecord revision, CommentRecord comment)
-        {
-            return new VssProjectRevision(this, revision, comment);
         }
 
         private class VssProjects : IEnumerable<VssProject>
