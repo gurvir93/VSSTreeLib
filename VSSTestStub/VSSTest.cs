@@ -15,7 +15,6 @@ namespace VSSTestStub
 
             var tree = new TreeWriter(Console.Out);
             tree.DumpProject(db.RootProject);
-              
         }
     }
 
@@ -44,8 +43,8 @@ namespace VSSTestStub
             var indentStr = new string(' ', indent);
 
             physicalNames.Add(project.PhysicalName);
-            writer.WriteLine("{0}{1}/ ({2})",
-                indentStr, project.Name, project.PhysicalName);
+            writer.WriteLine("{0}{1}/",
+                indentStr, project.Name);
 
             foreach (VssProject subproject in project.Projects)
             {
@@ -55,8 +54,8 @@ namespace VSSTestStub
             foreach (VssFile file in project.Files)
             {
                 physicalNames.Add(file.PhysicalName);
-                writer.WriteLine("{0}  {1} ({2}) - {3}",
-                    indentStr, file.Name, file.PhysicalName, file.GetPath(project));
+                writer.WriteLine("{0}  {1} - {2}",
+                    indentStr, file.Name, file.GetPath(project));
             }
         }
     }

@@ -47,10 +47,6 @@
     <Compile Include="VSSTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VssDump\VssDump.csproj">
-      <Project>{81940ba2-e5d1-4ea5-b183-557579b888e3}</Project>
-      <Name>VssDump</Name>
-    </ProjectReference>
     <ProjectReference Include="..\VssLogicalLib\VssLogicalLib.csproj">
       <Project>{0d191e03-15da-4dde-8cd5-b3031898faf3}</Project>
       <Name>VssLogicalLib</Name>
